@@ -11,6 +11,7 @@
   --background-for-header: #ececec;
   --size-margin-one: 30px;
   --border-card-portfolio: #eeeeee;
+  --transition: 2250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   color: var(--title-text-color);
@@ -131,6 +132,11 @@ img {
 
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-color);
 }
 .header-item {
   font-style: normal;
@@ -140,11 +146,23 @@ img {
   color: var(--title-text-color);
 
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-item::after {
+/* .header-item::after {
   content: '';
   width: 100%;
-  height: 2px;
+  height: 4px;
+  border-radius: 2px;
+
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  background-color: var(--accent-color);
+} */
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
   border-radius: 2px;
 
   position: absolute;
@@ -155,16 +173,11 @@ img {
 
 .header-item:hover,
 .header-item:focus {
-  font-weight: 500;
-  line-height: 1.14;
   color: var(--accent-color);
 }
 
 /* Hover для контактов */
-.header-contact:hover,
-.header-contact:focus {
-  color: var(--accent-color);
-}
+
 /* -----------------------------------hedaer icon---------- */
 
 .header-icon {
@@ -225,7 +238,7 @@ img {
   padding: 10px 32px;
 }
 
-/* --------------------------Позиционирование Main -------portfolio----*/
+/* -------------------------- Main -------portfolio----*/
 
 .portfolio-main {
   padding-top: 94px;
@@ -238,12 +251,47 @@ img {
   margin-bottom: 50px;
   justify-content: center;
 }
-.button-item {
+/* .button-item {
   margin-right: 8px;
 
   border-radius: 4px;
   overflow: hidden;
   border: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+/* ----------------------------Кнопки портфолио------------- */
+
+.button-item {
+  font-family: Roboto;
+  font-style: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  background-color: var(--button-background);
+  cursor: pointer;
+  font-family: inherit;
+  margin-right: 8px;
+  padding: 6px 22px;
+
+  border-radius: 4px;
+  overflow: hidden;
+  border: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-item:hover,
+.button-item:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  cursor: pointer;
+  font-family: inherit;
+
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.12), 0px 1px rgba(0, 0, 0, 0.08), 0px 3px rgba(0, 0, 0, 0.1);
+}
+.button-item:active {
+  color: var(--accent-color);
 }
 
 .main-list {
@@ -273,6 +321,9 @@ img {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
+.card-portfolio {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .card-portfolio:hover,
 .card-portfolio:focus {
@@ -297,7 +348,7 @@ img {
   left: 0;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-item:hover .text-img {
   transform: translateY(0);
@@ -442,7 +493,9 @@ img {
 .card-social-item + .card-social-item {
   margin-left: 10px;
 }
-
+.card-social-icon {
+  fill: currentColor;
+}
 .card-social-link {
   width: 44px;
   height: 44px;
@@ -453,10 +506,8 @@ img {
   border-radius: 50%;
 
   color: #afb1b8;
-}
-
-.card-social-icon {
-  fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-social-link:hover,
 .card-social-link:focus {
@@ -515,39 +566,15 @@ img {
   border-color: #afb1b8;
 
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-clients-link:hover,
 .card-clients-link:focus {
   background-color: var(--white-color);
   color: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-/* ----------------------------Кнопки портфолио------------- */
-
-.button-item {
-  font-family: Roboto;
-  font-style: 500;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.03em;
-  background-color: var(--button-background);
-  cursor: pointer;
-  font-family: inherit;
-
-  padding: 6px 22px;
-}
-.button-item:hover,
-.button-item:focus {
-  background-color: var(--accent-color);
-  color: var(--white-color);
-  cursor: pointer;
-  font-family: inherit;
-
-  box-shadow: 0px 2px rgba(0, 0, 0, 0.12), 0px 1px rgba(0, 0, 0, 0.08), 0px 3px rgba(0, 0, 0, 0.1);
-}
-.button-item:active {
-  color: var(--accent-color);
 }
 
 /* -------------------------------------Шрифты основного контента портфолио------------------------ */
@@ -596,10 +623,10 @@ img {
   letter-spacing: 0.03em;
   color: var(--style-for-footer-contacts);
   margin-bottom: 9px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contact:hover,
 .footer-contact:focus {
-  line-height: 1.7;
   color: var(--accent-color);
 }
 .adress {
@@ -655,6 +682,7 @@ img {
   border-radius: 50%;
 
   color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-card-link:hover,
 .footer-card-link:focus {
@@ -691,6 +719,8 @@ img {
   top: 0;
 
   background-color: rgba(0, 0, 0, 0.1);
+
+  transition: opacity 250ms, visibility 250ms;
 }
 .modal {
   width: 528px;
@@ -702,6 +732,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .modal-close {
   width: 30px;
   height: 30px;
