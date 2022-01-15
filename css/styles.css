@@ -159,6 +159,7 @@ img {
   bottom: -32px;
   background-color: var(--accent-color);
 } */
+
 .current::after {
   content: '';
   width: 100%;
@@ -170,7 +171,9 @@ img {
   bottom: -32px;
   background-color: var(--accent-color);
 }
-
+.contact > .current::after:hover {
+  background-color: tomato;
+}
 .header-item:hover,
 .header-item:focus {
   color: var(--accent-color);
