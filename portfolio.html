@@ -20,17 +20,28 @@
         <nav class="nav">
             <a href="/" class="link logo-flex"> <span class="logoweb">Web</span> <span class="logo">Studio</span> </a>
             <ul class="header-list ul-li">
-                <li class="contact"> <a href="./index.html" class="header-item link">Студия</a></li>
-                <li class="contact"> <a href="./portfolio.html" class="header-item link">Портфолио</a></li>
-                <li class="contact"> <a href="/" class="header-item link">Контакты</a></li>
+                <li class="contact"> <a href="./index.html" class="header-item link current">Студия</a></li>
+                <li class="contact"> <a href="./portfolio.html" class="header-item link current">Портфолио</a></li>
+                <li class="contact"> <a href="/" class="header-item link current">Контакты</a></li>
             </ul>
         </nav>
         <!-- Контакты -->
-        <ul class="header-contacts ul-li ">
-            <li class="contact"><a class="header-contact link" href="mailto:info@devstudio.com " title="info@devstudio.com"> info@devstudio.com
-                </a></li>
-                <li class="contact"><a class="header-contact link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-        </ul>
+            <ul class="header-contacts ul-li">
+                <li class="contact-item"><a class="header-contact link" href="mailto:info@devstudio.com " title="info@devstudio.com">
+                        <svg class="header-icon" width="16px" height="12px">
+                            <use href="./images/icons.svg#icon-envelope"> </use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="contact-item"><a class="header-contact link" href="tel:+380961111111">
+                        <svg class="header-icon" width="10px" height="16px">
+                            <use href="./images/icons.svg#icon-smartphone"> </use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
     </div>
 </header>
 <!-- Портфолио  -->
@@ -55,10 +66,15 @@
                 <ul class="main-list ul-li">
                     <li class="main-item">
                         <a href="" class="link">
-                            <article>
-                                
+                            <article class="card-portfolio">
+                                <div class="text-img-wrap">
                                     <img src="./images/portfolio-notebook.jpg" alt="Ноутбук" width="370">
-                                
+                                    <p class="text-img">
+                                        Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.
+                                    </p>
+                                </div>
+
                                 <div class="card-text" >
                                     <h2 class="title">Технокряк</h2>
                                     <p class="text">Веб-сайт</p>
@@ -69,7 +85,7 @@
 
                     <li class="main-item">
                         <a href="" class="link">
-                            <article>
+                            <article class="card-portfolio">
                                 
                                     <img src="./images/portfolio-basket.jpg" alt="Постер игры в баскетбол" width="370">
                                 
@@ -83,7 +99,7 @@
                     </li>
                     <li class="main-item">
                         <a href="" class="link">
-                            <article>
+                            <article class="card-portfolio">
                                 
                                     <img src="./images/portfolio-logo.jpg" alt="Логотип ресторана" width="370">
                                 
@@ -98,7 +114,7 @@
                     <li class="main-item">
                         <a href="/" class="link">
 
-                            <article>
+                            <article class="card-portfolio">
                                 
                                     <img src="./images/portfolio-music.jpg" alt="Наушники" width="370">
                                 
@@ -112,7 +128,7 @@
 
                     <li class="main-item">
                         <a href="/" class="link">
-                            <article>
+                            <article class="card-portfolio">
                                 
                                     <img src="./images/portfolio-cube.jpg" alt="Коробка" width="370">
                                 
@@ -124,51 +140,51 @@
                         </a>
                     </li>
 
-                    <li class="main-item">
-                        <article>
+                    <li class="main-item">                       
+                        <a href="/" class="link">
+                            <article class="card-portfolio">
                             
                                 <img src="./images/portfolio-screen.jpg" alt="Монитор" width="370">
                             
-                            <div class="card-text" >
-                                <h2 class="title" lang="en">Inspiration has no Borders</h2>
-                                <p class="text">Веб-сайт</p>
-                            </div>
-                        </article>
-                        <a href="/" class="link">
+                                <div class="card-text">
+                                    <h2 class="title" lang="en">Inspiration has no Borders</h2>
+                                    <p class="text">Веб-сайт</p>
+                                </div>
+                            </article>
                         </a>
                     </li>
 
-                    <li class="main-item">
-                        <article>
+                    <li class="main-item">                     
+                        <a href="/" class="link">
+                            <article class="card-portfolio">
                             
                                 <img src="./images/portfolio-book.jpg" alt="Книга" width="370">
                             
-                            <div class="card-text" >
-                                <h2 class="title">Издание <span lang="en">Limited Edition</span></h2>
-                                <p class="text">Дизайн</p>
-                            </div>
-                        </article>
-                        <a href="/" class="link">
+                                <div class="card-text">
+                                    <h2 class="title">Издание <span lang="en">Limited Edition</span></h2>
+                                    <p class="text">Дизайн</p>
+                                </div>
+                            </article>
                         </a>
                     </li>
 
                     <li class="main-item">
-                        <article>
+                        <a href="/" class="link">
+                            <article class="card-portfolio">
                             
                                 <img src="./images/portfolio-letters.jpg" alt="Бирка" width="370">
                             
-                            <div class="card-text" >
-                                <h2 class="title">Проект LAB</h2>
-                                <p class="text">Маркетинг</p>
-                            </div>
-                        </article>
-                        <a href="/" class="link">
+                                <div class="card-text">
+                                    <h2 class="title">Проект LAB</h2>
+                                    <p class="text">Маркетинг</p>
+                                </div>
+                            </article>
                         </a>
                     </li>
 
                     <li class="main-item">
                         <a href="/" class="link">
-                            <article>
+                            <article class="card-portfolio">
                                 
                                     <img src="./images/portfolio-business.jpg" alt="Вебсайт" width="370">
                                 
@@ -186,18 +202,83 @@
 
 
 <!-- footer -->
-<footer class="footer">
-    <div class="container">
-        <a href="/" class="logo-footer link"> <span class="logoweb">Web</span> <span class="footer-logo">studio</span> </a>
-        <address class="address-section">
-            <ul class="footer-list ul-li">
-                <li class="footer-item"><a href="/" class="footer-contact adress link"> г.Киев, пр-т Леси Украинки,26 </a></li>
-                <li class="footer-item"><a href="tel:+380991111111" class="footer-contact link">+38 099 111 11 11</a></li>
-                <li class="footer-item"><a href="mailto:info@example.com" title="info@example.com" class="footer-contact link"> info@example.com
-                    </a></li>
-            </ul>
-        </address>
-    </div>
-</footer>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer-main-container">
+            <div class="footer-left">
+                <a href="/" class="logo-footer link"> <span class="logoweb">Web</span> <span
+                        class="footer-logo">studio</span>
+                </a>
+    
+                <address class="address-section">
+                    <ul class="footer-list ul-li">
+                        <li class="footer-item"><a href="/" class="footer-contact adress link"> г.Киев, пр-т Леси
+                                Украинки,26 </a></li>
+                        <li class="footer-item"><a href="mailto:info@example.com" title="info@example.com"
+                                class="footer-contact link">info@example.com</a></li>
+                        <li class="footer-item"><a href="tel:+380991111111" class="footer-contact link">+38 099 111 11
+                                11</a></li>
+    
+                    </ul>
+                </address>
+            </div>
+    
+    
+            <!--  ------------------------------------Правая часть футер--------------- -->
+            <div class="footer-right">
+                <h3 class="footer-card-title">Присоединяйтесь</h3>
+                <ul class="footer-card-list ul-li">
+                    <li class="footer-card-item">
+                        <a href="" class="footer-card-link">
+                            <svg class="footer-card-icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-instagram">
+    
+                                </use>
+                            </svg>
+    
+                        </a>
+    
+                    </li>
+                    <li class="footer-card-item">
+                        <a href="" class="footer-card-link">
+                            <svg class="footer-card-icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-twitter">
+    
+                                </use>
+                            </svg>
+    
+                        </a>
+    
+                    </li>
+                    <li class="footer-card-item">
+                        <a href="" class="footer-card-link">
+                            <svg class="footer-card-icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-facebook">
+    
+                                </use>
+                            </svg>
+    
+                        </a>
+    
+                    </li>
+                    <li class="footer-card-item">
+                        <a href="" class="footer-card-link">
+                            <svg class="footer-card-icon" width="20" height="20px">
+                                <use href="./images/icons.svg#icon-linkedin">
+    
+                                </use>
+                            </svg>
+    
+                        </a>
+    
+                    </li>
+    
+                </ul>
+            </div>
+    
+    
+        </div>
+    
+    </footer>
 </body>
 </html> 
