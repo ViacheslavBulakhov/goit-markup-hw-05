@@ -94,13 +94,13 @@ img {
   color: var(--accent-color);
   font-family: Raleway;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
 }
 .logo {
   color: var(--title-text-color);
   font-family: Raleway;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
 }
 .logo-flex {
   padding: 24px 0 25px 0;
